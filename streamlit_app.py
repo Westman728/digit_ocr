@@ -54,13 +54,14 @@ def main():
     capture_button = st.button("Capture Image")
     st.write("Requirements: keep your digit centered. Digit must have clear outlines. Less shadows gives better result.")
     
-    if capture_button:
-        captured_frame = capture_image(camera)
-        image_recog(captured_frame)
     while camera.isOpened():
                     _, frame = camera.read()
                     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                     FRAME_WINDOW.image(frame)
+    if capture_button:
+        captured_frame = capture_image(camera)
+        image_recog(captured_frame)
+
     else:
             st.write('Stopped')
 
