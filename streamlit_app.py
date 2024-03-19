@@ -37,7 +37,11 @@ def image_recog(image):
 # Function to capture image from webcam
 def capture_image(camera):
     _, frame = camera.read()
-    return cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    if frame is not None:
+        return cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    else:
+        
+        return st.write("No frame found")  # Or raise an exception
 
 
 
