@@ -6,11 +6,10 @@ Created on Thu Mar 14 07:20:54 2024
 """
 import cv2
 import numpy as np
-import joblib
 import streamlit as st
 
-scaler = joblib.load(r'c:\users\rwest\desktop\ds23\machine learning\kunskapskontroll_2\minmaxscaler2.pkl')
-knn = joblib.load(r'c:\users\rwest\desktop\ds23\machine learning\kunskapskontroll_2\knn_model.pkl')
+scaler = 'minmaxscaler2.pkl'
+knn = 'knn_model.pkl'
 
 
 
