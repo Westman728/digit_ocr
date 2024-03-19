@@ -1,16 +1,16 @@
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: win-64
-joblib==1.2.0=py311haa95532_0
-numpy==1.26.4=py311hdab7c0b_0
-numpy-base==1.26.4=py311hd01c5d8_0
-numpydoc==1.5.0=py311haa95532_0
-opencv==4.6.0=py311h5d08a89_5
-opencv-python==4.9.0.80=pypi_0
-opendatasets==0.1.22=pypi_0
-openjpeg==2.4.0=h4fc8c34_0
-openssl==3.0.13=h2bbff1b_0
-pandas==2.1.4=py311hf62ec03_0
-spyder==5.4.3=py311haa95532_1
-spyder-kernels==2.4.4=py311haa95532_0
-streamlit==1.32.0=py311haa95532_0
+joblib==1.2.0
+numpy==1.26.4
+numpy-base==1.26.4
+numpydoc==1.5.0
+opencv==4.6.0
+opencv-python==4.9.0.80
+opendatasets==0.1.22
+openjpeg==2.4.0
+openssl==3.0.13
+pandas==2.1.4
+spyder==5.4.3
+spyder-kernels==2.4.4
+streamlit==1.32.0
