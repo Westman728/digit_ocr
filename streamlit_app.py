@@ -11,7 +11,7 @@ import streamlit as st
 scaler = 'minmaxscaler2.pkl'
 knn = 'knn_model.pkl'
 
-
+# ----- PSA: THIS METHOD ONLY WORKS LOCALLY ------
 
 #Image function
 def image_recog(image):
