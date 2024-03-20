@@ -13,7 +13,7 @@ knn = 'knn_model.pkl'
 
 
 
-#image function
+#Image function
 def image_recog(image):
     # image = cv2.GaussianBlur(image,(11,11),0)
     image = image[60:420, 100:540] #cropping outer edges
@@ -34,18 +34,18 @@ def image_recog(image):
 
 
 
-# Function to capture image from webcam
+#Function to capture image from webcam
 def capture_image(camera):
     _, frame = camera.read()
     if frame is not None:
         return cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     else:
         
-        return st.write("No frame found")  # Or raise an exception
+        return st.write("No frame found")
 
 
 
-# Main function
+#Main function
 def main():
     st.title("Webcam Live Feed for image recognition")
     FRAME_WINDOW = st.image([])
@@ -75,7 +75,7 @@ if __name__ == "__main__":
     main()
     
     
-#streamlit run "c:\users\rwest\desktop\ds23\machine learning\kunskapskontroll_2\streamlit_debug.py"
+#streamlit run "LOCAL FILEPATH TO RUN STREAMLIT"
 
 
 
@@ -87,30 +87,3 @@ if __name__ == "__main__":
 
 
 
-# "_" = img from camera recieved (True/False), "frame" = actual image, fed into the empty list FRAME_WINDOW
-    # if run:
-    #     while run:
-    #         _, frame = camera.read()
-    #         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    #         FRAME_WINDOW.image(frame)
-            
-    #         # when Capture Image button is pressed:
-    #         if capture_button:
-    #             captured_frame = capture_image(camera)
-    #             # pred = image_recog(captured_frame)
-    #             # st.write("Prediction:", pred)
-    #             captured_frame = cv2.GaussianBlur(captured_frame,(33,33), 0)
-    #             captured_frame = captured_frame[120:360, 160:480] #cropping outer edges
-    #             # (480, 640, 3) webcam reso
-    #             captured_frame = cv2.resize(captured_frame, (28,28), interpolation=cv2.INTER_NEAREST)
-    #             captured_frame = cv2.cvtColor(captured_frame, cv2.COLOR_BGR2GRAY)
-    #             captured_frame = cv2.bitwise_not(captured_frame) #background not black, fix!!
-    #             captured_frame = captured_frame.flatten()
-    #             captured_frame = captured_frame.reshape(1, -1)
-    #             captured_frame = scaler.transform(captured_frame)
-    #             pred = knn.predict(captured_frame)
-    #             st.write("Predicted digit:", pred)
-    #             st.write(captured_frame.shape)
-    #             st.write(type(captured_frame))
-    #             # st.image(captured_frame, caption="Captured Image", use_column_width=True)
-    #             break
